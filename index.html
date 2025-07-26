@@ -2,107 +2,180 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Panic Roleplay</title>
   <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
-      background-color: #121212;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e1e1e, #121212);
       color: #f5f5f5;
-      line-height: 1.6;
-      padding: 20px;
-      max-width: 960px;
-      margin: auto;
+      min-height: 100vh;
     }
-    h1, h2, h3 {
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #1a1a1a;
+      border-bottom: 2px solid #f39c12;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      z-index: 999;
+    }
+    nav .logo {
+      font-weight: 700;
+      font-size: 1.8rem;
       color: #f39c12;
+      user-select: none;
+      cursor: default;
     }
-    ul {
-      margin-left: 20px;
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
     }
-    a {
-      color: #f39c12;
+    nav ul li a {
+      color: #f5f5f5;
       text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
     }
-    a:hover {
-      color: #f5c279;
-      text-decoration: underline;
+    nav ul li a:hover {
+      color: #f39c12;
     }
+    /* Main content */
+    main {
+      padding: 120px 20px 40px;
+      max-width: 900px;
+      margin: auto;
+      user-select: none;
+    }
+    main h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #f39c12;
+      text-align: center;
+    }
+    main p {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #ddd;
+    }
+    /* Sections */
     section {
       margin-bottom: 50px;
     }
-    header {
-      text-align: center;
-      padding: 20px 0;
-      border-bottom: 2px solid #333;
-      margin-bottom: 30px;
+    section h2 {
+      color: #f39c12;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #f39c12;
+      padding-bottom: 5px;
+      user-select: text;
     }
+    section ul {
+      list-style: inside disc;
+      margin-left: 10px;
+      color: #ddd;
+    }
+    section ul li {
+      margin-bottom: 8px;
+    }
+    /* Footer */
     footer {
       text-align: center;
-      padding: 20px;
-      color: #ccc;
+      padding: 25px 15px;
       border-top: 1px solid #333;
-      margin-top: 50px;
-      font-size: 0.9em;
+      color: #aaa;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav ul {
+        gap: 15px;
+      }
+      main h1 {
+        font-size: 2.2rem;
+      }
+      main p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Panic Roleplay</h1>
-    <p>RP'yi ciddiye alanların adresi.</p>
-  </header>
-
-  <section id="kurallar">
-    <h2>Genel Kurallar</h2>
+  <nav>
+    <div class="logo">Panic Roleplay</div>
     <ul>
-      <li><strong>Saygı:</strong> Her oyuncu, diğer oyunculara ve yöneticilere karşı saygılı olmalıdır.</li>
-      <li><strong>Hakaret / Küfür:</strong> IC (rol içi) hariç OOC (rol dışı) küfür, hakaret, ırkçılık ve ayrımcılık kesinlikle yasaktır.</li>
-      <li><strong>Reklam:</strong> Discord, Twitch, YouTube vb. reklamları yasaktır.</li>
-      <li><strong>Üstünlük:</strong> Admin veya destek ekibi oyuncuya üstünlük kurmaz. Tarafsız olmalıdır.</li>
+      <li><a href="#anasayfa">Ana Sayfa</a></li>
+      <li><a href="#sunucu">Sunucu Hakkında</a></li>
+      <li><a href="#kurallar">Kurallar</a></li>
+      <li><a href="#discord">Discord'a Katıl</a></li>
+      <li><a href="#ekip">Ekip Kadrosu</a></li>
+      <li><a href="#sss">SSS</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
     </ul>
+  </nav>
 
-    <h2>Roleplay (RP) Kuralları</h2>
-    <ul>
-      <li><strong>Karakter Tutarlılığı:</strong> Karakterlerinizin geçmişi, davranışları ve kararları tutarlı olmalıdır.</li>
-      <li><strong>FailRP:</strong> Gerçek hayatta yapılması mümkün olmayan şeyleri yapmak yasaktır.</li>
-      <li><strong>PowerGaming:</strong> Gerçek dışı, abartılı güç kullanımı yasaktır.</li>
-      <li><strong>MetaGaming:</strong> OOC bilgiyle IC avantaj sağlamak yasaktır.</li>
-      <li><strong>RDM:</strong> Sebepsiz yere oyuncu öldürmek yasaktır.</li>
-      <li><strong>VDM:</strong> Araçla bilerek birini ezmek yasaktır.</li>
-      <li><strong>FearRP:</strong> Gerçek hayattaki gibi korku rolü yapılmalıdır.</li>
-      <li><strong>NVL:</strong> Karakterin canını hiçe saymak yasaktır.</li>
-      <li><strong>Combat Logging:</strong> Çatışma sırasında oyundan çıkmak yasaktır.</li>
-      <li><strong>Revenge Kill:</strong> Ölünce intikam almak yasaktır. Hafıza silinir.</li>
-    </ul>
+  <main>
+    <section id="anasayfa">
+      <h1>Hoş Geldin Panic Roleplay</h1>
+      <p>Gerçekçi rol yapmanın ve kaliteli topluluğun adresi.</p>
+    </section>
 
-    <h2>Polis ve EMS Rolü</h2>
-    <ul>
-      <li>Polis memurları kurallara uymalı, yetkilerini kötüye kullanmamalıdır.</li>
-      <li>EMS rolünde olanlar tarafsız davranmalı ve suistimal yapmamalıdır.</li>
-      <li>Polis baskınları ve tutuklamalar düzgün RP ile yapılmalıdır.</li>
-      <li>Ambulans çağrıları keyfi reddedilemez.</li>
-    </ul>
+    <section id="sunucu">
+      <h2>Sunucu Hakkında</h2>
+      <p>Panic Roleplay, samimi oyuncuların buluştuğu, kurallara bağlı, eğlenceli bir roleplay sunucusudur.</p>
+    </section>
 
-    <h2>Illegal Rol Kuralları</h2>
-    <ul>
-      <li>Büyük suç RP’leri için (banka, mücevher soygunu) minimum polis sayısı gerekir (örn: 4).</li>
-      <li>Rehine kullanımı mantıklı ve detaylı RP ile yapılmalıdır.</li>
-      <li>Mafya, çete, kartel gibi oluşumlar yönetim onayı olmadan kurulamaz.</li>
-      <li>Uyuşturucu/silah satışı detaylı RP ile yapılmalıdır.</li>
-    </ul>
+    <section id="kurallar">
+      <h2>Kurallar</h2>
+      <ul>
+        <li><strong>Saygı:</strong> Her oyuncu, diğer oyunculara ve yöneticilere karşı saygılı olmalıdır.</li>
+        <li><strong>Hakaret / Küfür:</strong> IC hariç OOC küfür, hakaret, ırkçılık ve ayrımcılık yasaktır.</li>
+        <li><strong>Reklam:</strong> Discord, Twitch, YouTube vb. reklamlar yasaktır.</li>
+        <li><strong>Roleplay:</strong> FailRP, PowerGaming, MetaGaming, RDM, VDM gibi davranışlar yasaktır.</li>
+        <li><strong>Polis ve EMS:</strong> Yetkiler kötüye kullanılmamalıdır.</li>
+        <li><strong>Illegal Rol:</strong> Büyük suçlar detaylı RP ile yapılmalıdır.</li>
+        <li><strong>Ek Kurallar:</strong> Safezone, OOC, sesli RP ve ceza sistemi kuralları uygulanır.</li>
+      </ul>
+    </section>
 
-    <h2>Ek Kurallar</h2>
-    <ul>
-      <li><strong>Safezone:</strong> Karakol, hastane ve kamu alanlarında illegal RP yasaktır.</li>
-      <li><strong>OOC Chat:</strong> Gereksiz /ooc kullanımı yasaktır.</li>
-      <li><strong>Sesli RP:</strong> Mikrofon zorunludur, ses net olmalı.</li>
-      <li><strong>Troll RP:</strong> Aşırı saçma, ciddiyetsiz RP yasaktır.</li>
-      <li><strong>Yayıncılar:</strong> Yayın yapanlara saygı gösterilmeli, troll yapılmamalıdır.</li>
-      <li><strong>Ceza Sistemi:</strong> Uyarı → Jail → Ban sistematik şekilde uygulanır.</li>
-      <li>Şikayetler kanıtla yapılmalı, yetkili ekibe iletilmelidir.</li>
-    </ul>
-  </section>
+    <section id="discord">
+      <h2>Discord'a Katıl</h2>
+      <p><a href="https://discord.gg/yourdiscordlink" target="_blank" rel="noopener noreferrer" style="color:#f39c12;">Discord sunucumuza katılmak için tıklayın</a></p>
+    </section>
+
+    <section id="ekip">
+      <h2>Ekip Kadrosu</h2>
+      <ul>
+        <li>Admin: Sinan Baran</li>
+        <li>Moderator: Gonzales</li>
+        <li>Destek: Max</li>
+      </ul>
+    </section>
+
+    <section id="sss">
+      <h2>Sıkça Sorulan Sorular (SSS)</h2>
+      <p><strong>Soru 1:</strong> Nasıl kayıt olabilirim?<br />Discord üzerinden kayıt olabilirsiniz.</p>
+      <p><strong>Soru 2:</strong> Sunucu saat kaçta açıktır?<br />7/24 açıktır.</p>
+    </section>
+
+    <section id="iletisim">
+      <h2>İletişim</h2>
+      <p>Her türlü soru ve öneriniz için: <a href="mailto:info@panicroleplay.com" style="color:#f39c12;">info@panicroleplay.com</a></p>
+    </section>
+  </main>
 
   <footer>
     &copy; 2025 Panic Roleplay. Tüm hakları saklıdır.
